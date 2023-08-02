@@ -1,81 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import logoop from "/logoop.svg"
+import Circuit from '../components/Circuit.astro';
+import Carousel from '../components/Carousel.astro';
+import SocialN from '../components/SocialN.astro';
+import Background from '../components/Background.astro';
+import Tool from '../components/Tool.astro'
+import LcdEditor from '/lcdeditor.webp'
 ---
-
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<Layout title="Opentronika">
+	<!-- <Circuit/> -->
+	<!-- <Background/> -->
+	<Header buttons={["Channel","Tools","About"]}><a href="#">Hola que hace </a></Header>
+	<main class=" xl:h-screen relative overflow-auto snap-y xl:snap-mandatory">
+		<section class=" md:h-screen grid place-content-center grid-cols-1 md:grid-cols-2 snap-center" id="home">
+			<div>
+				<div class="p-10">
+					<img src={logoop} alt="logo" class="h-50 mx-auto drop-shadow-lg">
+				</div>
+				<article class=" text-center">
+					<h1 class=" text-4xl text-white m-3">Opentronika</h1>
+					<h3 class=" text-3xl text-white m-2">Un sitio para aprender electronica</h3>
+				</article>
+			</div>
+			<SocialN></SocialN>
+		</section>
+		<section class="grid xl:h-screen place-content-center snap-center overflow-hidden" id="tools">
+			<h1 class=" text-center text-3xl text-white mx-auto">Tools</h1>
+			<hr class="transition ease-in-out delay-150 m-5" >
+			<article class=" flex flex-wrap place-content-center ">
+				<Tool src={LcdEditor} body='Generalmente, los editores para caracteres LCD solo soportan un carácter, esta herramienta soporta múltiples caracteres con lo que podrás hacer diseños complejos directamente como si fuera una lcd real. ' title='LCD editor pro' href='https://opentronika.org'> </Tool>
+			</article>
+		</section>		
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+	html{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		background: linear-gradient(91deg, #0C459B 0%, rgba(45, 50, 173, 0.86) 79.70%);
+		scroll-behavior: auto;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+	body{
+		margin: 0%;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.logoshadow{
+		text-shadow: 30px;
 	}
 </style>
+
