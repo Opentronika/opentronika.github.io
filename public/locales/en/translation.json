@@ -1,0 +1,10 @@
+{
+    "menu":{
+        "home":"Home",
+        "tools":"Tools"
+    },
+    "description":"A place to learn electronics",
+    "tools":{
+        "lcd-editor-pro":"Generally, LCD character editors only support one character, this tool supports multiple characters so you can make complex designs directly as a real lcd."
+    }
+}

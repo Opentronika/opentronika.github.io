@@ -1,0 +1,10 @@
+{
+    "menu":{
+        "home":"Inicio",
+        "tools":"Herramientas"
+    },
+    "description":"Un sitio para aprender electronica",
+    "tools":{
+        "lcd-editor-pro":"Generalmente, los editores para caracteres LCD solo soportan un carácter, esta herramienta soporta múltiples caracteres con lo que podrás hacer diseños complejos directamente como si fuera una lcd real. "
+    }
+}
