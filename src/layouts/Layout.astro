@@ -1,5 +1,6 @@
 ---
 import i18next from "i18next";
+import { t, changeLanguage } from "i18next";
 export interface Props {
 	title: string;
 }
@@ -11,7 +12,7 @@ const { title } = Astro.props;
 <html lang={i18next.language} >
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content=" Opentronika es un sitio donde econtraras lecciones y herramientas para que aprender electronica sea mas sencillo y divertido">
+		<meta name="description" content={t("meta.description")}>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="keywords" content="Electronica, Proyectos, Herramientas, Tools, arduino, lcd, esp32, online, lcd screen generator, editor de lcd online">
 		<meta name="author" content="LutGaru">
