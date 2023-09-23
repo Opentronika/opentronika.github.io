@@ -5,7 +5,7 @@
     },
     "description":"A place to learn electronics",
     "tools":{
-        "lcd-editor-pro":"Advanced and powerful LCD characters editor. Generally, LCD character editors only support one character, this tool supports multiple characters so you can make complex designs directly as a real LCD."
+        "lcd-editor-pro":"Advanced and powerful LCD characters editor online. Generally, LCD character editors only support one character, this tool supports multiple characters so you can make complex designs directly as a real LCD."
     },
     "meta":{
         "description":"Opentronika is a site where you will find lessons and tools to make learning electronics easier and more fun"
