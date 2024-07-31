@@ -3,7 +3,7 @@
         "home":"Home",
         "tools":"Tools"
     },
-    "description":"A place to learn electronics",
+    "description":"A space to learn electronics",
     "tools":{
         "lcd-editor-pro":"Advanced and powerful LCD characters editor online. Generally, LCD character editors only support one character, this tool supports multiple characters so you can make complex designs directly as a real LCD."
     },
