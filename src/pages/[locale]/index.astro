@@ -1,18 +1,21 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Card from "../../components/Card.astro";
 import Header from "../../components/Header.astro";
 import logoop from "/logoop.svg";
-import Circuit from "../../components/Circuit.astro";
-import Carousel from "../../components/Carousel.astro";
 import SocialN from "../../components/SocialN.astro";
-import Background from "../../components/Background.astro";
 import Tool from "../../components/Tool.astro";
 import LcdEditor from "/lcdeditor.webp";
-import { t, changeLanguage } from "i18next";
-import { Trans, LanguageSelector } from "astro-i18next/components";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'; 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-changeLanguage("es");
+export async function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+  ];
+}
+
 ---
 <Layout title="Opentronika">
 	<!-- <Circuit/> -->
@@ -35,7 +38,7 @@ changeLanguage("es");
 			<h1 class=" text-center text-3xl text-white mx-auto">Tools</h1>
 			<hr class="transition ease-in-out delay-150 m-5" >
 			<article class=" flex flex-wrap place-content-center ">
-				<Tool src={LcdEditor} body={t("tools.lcd-editor-pro")} title='LCD editor pro' href='https://opentronika.org/lcd-editor-pro/'> </Tool>
+				<Tool src={LcdEditor} body={t("lcd-editor-pro")} title='LCD editor pro' href='https://opentronika.org/lcd-editor-pro/'> </Tool>
 			</article>
 		</section>		
 	</main>
