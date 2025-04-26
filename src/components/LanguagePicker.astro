@@ -1,15 +1,27 @@
 ---
-import { languages } from '../i18n/ui';
-import { getLangFromUrl } from '../i18n/utils';
-
-const route = getLangFromUrl(Astro.url);
+import { languages, defaultLang } from '../i18n/ui';
+const currentLang = Astro.url.pathname.split('/')[1] || defaultLang;
 ---
 
-<ul>
-  {Object.entries(languages).map(([lang, label]) => (
-    <li>
-      {/* <a href={`/${lang}/${route || ''}`}>{label}</a> */}
-      <a href={Astro.url.pathname.replace(`/^\/[a-z]{2}/`, `/${lang}`)}>{label}</a>
-    </li>
-  ))}
-</ul>
+<div class="inline-block">
+  <label for="lang-select" class="sr-only">Select Language</label>
+  <select
+    id="lang-select"
+    class="px-4 py-2 rounded-sm bg-transparent shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+    onchange="changeLang(event)"
+  >
+    {Object.entries(languages).map(([lang, label]) => (
+      <option value={lang} selected={currentLang === lang} class="text-gray-300 bg-gray-700" >
+        {label}
+      </option>
+    ))}
+  </select>
+</div>
+
+<script is:inline>
+  function changeLang(e) {
+    const newLang = e.target.value;
+    const path = location.pathname.replace(/^\/[a-z]{2}/, `/${newLang}`);
+    window.location.pathname = path;
+  }
+</script>
