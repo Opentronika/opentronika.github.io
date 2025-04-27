@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 import logoop from "../images/logoop.svg";
+import { getLangFromUrl, useTranslations } from '../i18n/utils'; 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 export interface Props {
 	title: string;
 }
@@ -12,7 +15,7 @@ const { title } = Astro.props;
 <html >
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={}>
+		<meta name="description" content={t("description")} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="keywords" content="Electronica, Proyectos, Herramientas, Tools, arduino, lcd, esp32, online, lcd screen generator, editor de lcd online, lcd editor, editor lcd">
 		<meta name="author" content="LutGaru">
