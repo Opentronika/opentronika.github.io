@@ -1,10 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
-import logoop from "/logoop.svg";
+import logoop from "../../images/logoop.svg"
+// import logoop from "/logoop.svg";
 import SocialN from "../../components/SocialN.astro";
 import Tool from "../../components/Tool.astro";
-import LcdEditor from "/lcdeditor.webp";
+import LcdEditor from "../../images/lcdeditor.webp";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils'; 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -25,7 +26,7 @@ export async function getStaticPaths() {
 		<section class=" md:h-screen grid place-content-center grid-cols-1 md:grid-cols-2 snap-center" id="home">
 			<div>
 				<div class="p-10">
-					<img src={logoop} alt="logo" class="h-50 mx-auto drop-shadow-lg">
+					<img src={logoop.src} alt="logo" class="h-50 mx-auto drop-shadow-lg">
 				</div>
 				<article class=" text-center">
 					<h1 class=" text-4xl text-white m-3">Opentronika</h1>
@@ -38,7 +39,7 @@ export async function getStaticPaths() {
 			<h1 class=" text-center text-3xl text-white mx-auto">Tools</h1>
 			<hr class="transition ease-in-out delay-150 m-5" >
 			<article class=" flex flex-wrap place-content-center ">
-				<Tool src={LcdEditor} body={t("lcd-editor-pro")} title='LCD editor pro' href='https://opentronika.org/lcd-editor-pro/'> </Tool>
+				<Tool src={LcdEditor.src} body={t("lcd-editor-pro")} title='LCD editor pro' href='https://opentronika.org/lcd-editor-pro/'> </Tool>
 			</article>
 		</section>		
 	</main>

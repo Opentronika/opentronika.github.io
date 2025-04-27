@@ -1,16 +1,17 @@
 ---
 import Card from "./Card.astro";
-import logoop from "/logoop.svg"
-import InstagramLogo from "/InstagramLogo.svg"
-import TiktokLogo from "/TikTokLogo.svg"
-import YouTubeLogo from "/YouTubeLogo.svg"
+// import logoop from "/logoop.svg"
+import logoop from "../images/logoop.svg"
+import InstagramLogo from "../images/InstagramLogo.svg"
+import TiktokLogo from "../images/TikTokLogo.svg"
+import YouTubeLogo from "../images/YouTubeLogo.svg"
 ---
 
 <article class=" my-auto p-5">
     <ul class=" flex flex-wrap justify-center">
-        <Card src={InstagramLogo} title="@opentronika" body="Instagram" href="https://www.instagram.com/opentronika"></Card>
-        <Card src={TiktokLogo} title="@opentronika" body="TikTok" href="https://www.tiktok.com/@opentronika"></Card>
-        <Card src={YouTubeLogo} title="@opentronika" body="YouTube" href="https://www.youtube.com/channel/UCYYOEvuoSh2K1OxUyNcKvIA"></Card>
+        <Card src={InstagramLogo.src} title="@opentronika" body="Instagram" href="https://www.instagram.com/opentronika"></Card>
+        <Card src={TiktokLogo.src} title="@opentronika" body="TikTok" href="https://www.tiktok.com/@opentronika"></Card>
+        <Card src={YouTubeLogo.src} title="@opentronika" body="YouTube" href="https://www.youtube.com/channel/UCYYOEvuoSh2K1OxUyNcKvIA"></Card>
     </ul>
 
 </article>
