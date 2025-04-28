@@ -7,19 +7,19 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 // import { Trans, LanguageSelector } from "astro-i18next/components";
 ---
-<header class="py-3 flex bg-white/50  items-center h-14 drop-shadow-lg sticky top-0 z-10 dark:bg-gray-800 dark:bg-opacity-50">
+<header class="py-3 flex bg-black border-b border-white  items-center h-14 drop-shadow-lg sticky top-0 z-10 ">
     <div class="flex flex-grow basic-0 opacity-100">
         <img  src={logoop.src} alt="logo" class="h-10 mx-3">
     </div>
     <nav class=" mx-5 mr-10">
         <ul class="flex text-sm text-white">
-            <li class=" transition w-20 text-center m-1 border-2 border-blue-100 border-opacity-0 rounded hover:border-opacity-100">
+            <li class=" transition w-full text-center m-1 rounded hover:border-opacity-100">
                 <a href="#home"  class="block h-full p-2">{t("nav.home")}</a>
             </li>
-            <li class=" transition w-25 text-center m-1 border-2 border-blue-100 border-opacity-0 rounded hover:border-opacity-100">
+            <li class=" transition w-full text-center m-1 rounded hover:border-opacity-100">
                 <a href="#tools"  class="block h-full p-2">{t("nav.Tools")}</a>
             </li>
-            <li class=" transition w-25 text-center m-1 border-2 border-blue-100 border-opacity-0 rounded hover:border-opacity-100">
+            <li class=" transition w-full text-center m-1 rounded hover:border-opacity-100">
                 <LanguagePicker showFlag={true} class="block text-white w-full bg-transparent align-middle h-full"/>
             </li>
             <!-- <li class=" transition w-20 text-center p-2 m-1 border-2 border-blue-100 border-opacity-0 rounded hover:border-opacity-100">

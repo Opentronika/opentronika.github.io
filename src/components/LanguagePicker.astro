@@ -3,11 +3,11 @@ import { languages, defaultLang } from '../i18n/ui';
 const currentLang = Astro.url.pathname.split('/')[1] || defaultLang;
 ---
 
-<div class="inline-block">
+<div class="inline-block w-20">
   <label for="lang-select" class="sr-only">Select Language</label>
   <select
     id="lang-select"
-    class="px-4 py-2 rounded-sm bg-transparent shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+    class="py-2 rounded-sm bg-transparent shadow-sm focus:outline-none w-full"
     onchange="changeLang(event)"
   >
     {Object.entries(languages).map(([lang, label]) => (
