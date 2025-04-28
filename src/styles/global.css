@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "hemi_font";
+    src: url("/fonts/hemi_head_bd_it.otf") format("opentype"); 
+    font-weight: normal;
+    font-style: normal;
+    /* font-display: swap; */
+  }
+
+@theme{
+    --font-hemi: "hemi_font";
+    --color-opentronika: #0099B0;
+}
