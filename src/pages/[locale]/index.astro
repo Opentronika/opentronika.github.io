@@ -6,6 +6,7 @@ import logoop from "../../images/logoop.svg"
 import SocialN from "../../components/SocialN.astro";
 import Tool from "../../components/Tool.astro";
 import LcdEditor from "../../images/lcdeditor.webp";
+import Marquee from "../../components/Marquee.astro";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils'; 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -28,9 +29,10 @@ export async function getStaticPaths() {
 				<div class="p-10">
 					<img src={logoop.src} alt="logo" class="h-50 mx-auto drop-shadow-lg">
 				</div>
-				<article class=" text-center">
+				<article class=" text-center justify-items-center">
 					<h1 class=" text-4xl m-3 font-hemi text-opentronika " >Opentronika</h1>
-					<h3 class=" text-3xl text-white m-2 animate-marquee">{t("description")}</h3>
+					<h3 class=" text-3xl text-white font-hemi m-2">{t("description")}</h3>
+					
 				</article>
 			</div>
 			<SocialN></SocialN>
