@@ -8,13 +8,13 @@ export interface Props {
 
 const { src, href, title, body } = Astro.props;
 ---
-<div class=" bg-white/10 text-white hover:-translate-y-1 hover:scale-110  hover:bg-opacity-80 duration-300 rounded-sm shadow m-3 ">
+<div class=" bg-white/10 text-white hover:-translate-y-1 hover:scale-110  hover:bg-neutral-700 duration-300 rounded-sm shadow m-3 ">
         <a href={href} target="_blank">
             <div class="flex flex-wrap justify-center max-w-2xl ">
-                <img class="my-auto p-5 rounded max-h-60" src={src} alt="product image" />
+                <img class="my-auto p-5 rounded max-h-100" src={src} alt="product image" />
             <div class="px-3 pb-5 max-w-lg">
                     <h1 class="text-xl font-semibold tracking-tight text-center m-5">{title}</h1>
-                    <p class="text-md text-justify">{body}</p>
+                    <p class="text-md text-center">{body}</p>
             </div>
         </div>
     </a>

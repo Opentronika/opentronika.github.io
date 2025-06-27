@@ -5,8 +5,8 @@ import logoop from "../../images/logoop.svg"
 // import logoop from "/logoop.svg";
 import SocialN from "../../components/SocialN.astro";
 import Tool from "../../components/Tool.astro";
-import LcdEditor from "../../images/lcdeditor.webp";
 import Marquee from "../../components/Marquee.astro";
+import Tools from "../../components/Tools.astro";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils'; 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -37,13 +37,7 @@ export async function getStaticPaths() {
 			</div>
 			<SocialN></SocialN>
 		</section>
-		<section class="grid xl:h-screen place-content-center snap-center overflow-hidden" id="tools">
-			<h1 class=" text-center text-3xl text-white mx-auto">Tools</h1>
-			<hr class="transition ease-in-out delay-150 m-5" >
-			<article class=" flex flex-wrap place-content-center ">
-				<Tool src={LcdEditor.src} body={t("lcd-editor-pro")} title='LCD editor pro' href='https://opentronika.org/lcd-editor-pro/'> </Tool>
-			</article>
-		</section>		
+		<Tools/>
 	</main>
 </Layout>
 
