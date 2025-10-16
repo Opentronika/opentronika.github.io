@@ -2,16 +2,18 @@
 import Tool from './Tool.astro';
 import LcdEditor from "../images/lcdeditor.webp";
 import SerialGuiRs from "../images/serialguirs.png";
+import ByteAnalyzer from "../images/byteanalyzer.png";
 import { getLangFromUrl, useTranslations } from '../i18n/utils'; 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
     
-    <section class="grid xl:h-screen place-content-center snap-center overflow-hidden" id="tools">
+    <section class="grid  place-content-center snap-center overflow-hidden" id="tools">
 			<h1 class=" text-center text-3xl text-white mx-auto">Tools</h1>
 			<hr class="transition ease-in-out delay-150 m-5" >
 			<article class=" flex flex-wrap place-content-center ">
 				<Tool src={LcdEditor.src} body={t("lcd-editor-pro")} title='LCD editor pro' href='https://opentronika.org/lcd-editor-pro/'> </Tool>
 				<Tool src={SerialGuiRs.src} body={t("serialgui-rs")} title='SerialGUI-rs' href='https://github.com/Opentronika/SerialGUI-rs/releases'> </Tool>
+				<Tool src={ByteAnalyzer.src} body={t("byte-analyzer")} title='Byte Analyzer' href='https://opentronika.org/byte_analyzer/'> </Tool>
 			</article>
 		</section>		
