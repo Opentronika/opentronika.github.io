@@ -8,7 +8,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
     
-    <section class="grid  place-content-center snap-center overflow-hidden" id="tools">
+    <div class="place-content-center pt-24" >
 			<h1 class=" text-center text-3xl text-white mx-auto">Tools</h1>
 			<hr class="transition ease-in-out delay-150 m-5" >
 			<article class=" flex flex-wrap place-content-center ">
@@ -16,4 +16,4 @@ const t = useTranslations(lang);
 				<Tool src={SerialGuiRs.src} body={t("serialgui-rs")} title='SerialGUI-rs' href='https://github.com/Opentronika/SerialGUI-rs/releases'> </Tool>
 				<Tool src={ByteAnalyzer.src} body={t("byte-analyzer")} title='Byte Analyzer' href='https://opentronika.org/byte_analyzer/'> </Tool>
 			</article>
-		</section>		
+		</div>		
