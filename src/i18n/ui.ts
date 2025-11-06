@@ -15,6 +15,7 @@ export const ui = {
         "serialgui-rs": "SerialGUI-Rs is a fast and efficient cross-platform serial terminal monitor written in Rust. It features a lightweight graphical interface for real-time monitoring of serial ports. Users can configure parameters like baud rate and parity easily, making it ideal for developers working with embedded systems and serial communication across multiple platforms.",
         "byte-analyzer":"Byte Analyzer is a tool to visualize and edit byte values, showing their representation in hexadecimal, binary, and various data types (e.g., uint8, uint16, int8, int16, int32, int64, etc). It allows users to input byte values in different formats and see how they translate across these representations, making it useful for debugging and data analysis tasks.",
         "News":"News",
+        "Noposts":"No posts available.",
     },
     es: {
         'nav.home': 'Inicio',
@@ -25,5 +26,6 @@ export const ui = {
         "serialgui-rs": "SerialGUI-Rs es un monitor de terminal serial multiplataforma, rápido y eficiente, escrito en Rust. Ofrece una interfaz gráfica liviana para la monitorización en tiempo real de puertos seriales. Permite configurar parámetros como la velocidad en baudios y la paridad, siendo ideal para desarrolladores que trabajan con sistemas embebidos y comunicación serial.",
         "byte-analyzer":"Byte Analyzer es una herramienta para visualizar y editar valores byte, mostrando su representación en hexadecimal, binario y varios tipos de datos (por ejemplo, uint8, uint16, int8, int16, int32, int64, etc.). Permite a los usuarios ingresar valores byte en diferentes formatos y ver cómo se traducen en estas representaciones, siendo útil para tareas de depuración y análisis de datos.",
         "News":"Noticias",
+        "Noposts":"No hay publicaciones disponibles.",
     },
 } as const;

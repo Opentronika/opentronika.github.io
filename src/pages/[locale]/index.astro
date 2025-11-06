@@ -8,6 +8,7 @@ import Tool from "../../components/Tool.astro";
 import Marquee from "../../components/Marquee.astro";
 import Tools from "../../components/Tools.astro";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils'; 
+import Feed from '../../components/Feed.astro';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -24,7 +25,7 @@ export async function getStaticPaths() {
 	<!-- <Background/> -->
 	<Header buttons={["Channel","Tools","About"]}></Header>
 	    <main class="snap-y xl:snap-mandatory h-screen overflow-y-auto scroll-smooth">
-        <section class=" md:h-screen grid place-content-center grid-cols-1 md:grid-cols-2 snap-center" id="home">
+        <section class=" xl:h-screen grid place-content-center grid-cols-1 xl:grid-cols-2 snap-center" id="home">
             <div>
                 <div class="p-10">
                     <img src={logoop.src} alt="logo" class="h-50 mx-auto drop-shadow-lg">
@@ -34,8 +35,11 @@ export async function getStaticPaths() {
 					<h3 class=" text-3xl text-white font-hemi m-2">{t("description")}</h3>
 					
                 </article>
+            	<SocialN></SocialN>
             </div>
-            <SocialN></SocialN>
+			 <div class="p-10">
+				<Feed/>
+			 </div>
         </section>
         <section class="min-h-screen snap-center " id="tools">
             <Tools/>
